@@ -9,7 +9,7 @@
 </head>
 <body>
     <header id="head">
-        <a href="index.html"><div id="brand"><img src="images/logo.png"></div></a>
+        <a href="index.html"><div id="brand"><img src="images/hreniuc.png"></div></a>
     </header>
 
     <main>
@@ -34,7 +34,7 @@
             <h2>What I Do</h2>
             <div class="services-container">
                 <div class="web service">
-                    <h3 class="with-line">web designer</h3>
+                    <h3 class="with-line">web design</h3>
                     <p>With over 2 years of practical experience, I can 
                         provide exceptional services of developing websites that bring, keep, and make customers.</p>
                     <a href="#"><button id="view-service">View</button></a>
@@ -46,7 +46,7 @@
                     <a href="#"><button id="view-service">View</button></a>
                 </div>
                 <div class="photoshop service">
-                    <h3 class="with-line">photshop artist</h3>
+                    <h3 class="with-line">digital art</h3>
                     <p>Started as a hobby and passion, still is up to this date. Over 5+ years of constantly creating 
                         digital art has trained my eyes for beauty, being able to design goregeous products.</p>
                     <a href="#"><button id="view-service">View</button></a>
@@ -54,8 +54,26 @@
             </div>
         </section>
 
-
+        <section id="contact-section">
+            <h2>Ask<br>Me<br>Anything</h2>
+            <div class="contact-form">
+                <h2>Contact Me</h2>
+                    <form action="submit_contact_form.php" method="post">
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Name*" required>
+        
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Email*" required>
+        
+                        <textarea id="message" name="message" class="form-input" placeholder="Message*" rows="4" required></textarea>
+        
+                        <button type="submit" class="form-button">Send</button>
+                    </form>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <a href="#"><img src="images/hreniuc-white.png" id="hreniuc"></a>
+    </footer>
 
 <script src="script.js"></script>
 </body>
