@@ -4,7 +4,7 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: whitesmoke;
+    background-color:#161618 ;
   }
 
   html {
@@ -32,8 +32,33 @@ body {
   max-width: 150px;
 }
 
-
 main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-section {
+    position: relative;
+    height: 100vh;
+}
+
+.hero-img {
+    background: url(images/me.png);
+    width: 300px;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about {
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -41,102 +66,120 @@ main {
     align-items: center;
 }
 
-.hero-img {
-    display: flex;
-    justify-self: center;
-    align-self: center;
+.about > ul {
+    padding-top: 290px;
 }
 
-#me {
-    border-radius: 20px;
-    margin-top: 5%;
+.about > ul > li {
+    color: #FFC700;
+    list-style: none;
+    font-size: 1.75rem;
+    font-weight: 1000;
+    text-transform: uppercase;
 }
 
-.quals-and-linkedin ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.about-text {
+    color: white;
+    max-width: 300px;
 }
 
-.quals-and-linkedin li {
-    list-style-type: none;
+.about-text > h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    opacity: .7;
+}
+
+#contact-me {
+    border-style: none;
+    border-radius: 15px;
+    padding: 10px 25px;
     font-size: 1.25rem;
+    background-color: #FFC700;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.quals-and-linkedin {
+#contact-me:hover {
+    background-color: white;
+    transition: .2s;
+    cursor: pointer;
+}
+
+#contact-me:active {
+    background-color: #FFC700;
+    transform: translateY(5px);
+}
+
+#services-section {
     display: grid; 
     grid-auto-columns: 1fr; 
-    grid-template-columns: 1fr 1fr; 
-    height: 100px;
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0.3fr 1.7fr; 
     gap: 0px 0px; 
-}
-
-
-.quals-and-linkedin a {
-    display: flex;
-    justify-self: center;
-    align-self: center;
-    text-decoration: none;
-}
-
-#linkedin{
-    background-color: black;
-    padding: 15px;
-    font-size: 3.25rem;
+    grid-template-areas: 
+    "."
+    "."; 
     color: white;
-    border-radius: 20px;
-    max-width: fit-content;
-    box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
-
 }
 
-#linkedin:hover {
-    cursor: pointer;    
+#services-section > h2 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: normal;
+    border-right: 1px solid #FFC700;
+    border-bottom: 1px solid #FFC700;
 }
 
-#linkedin:active {
-    background-color: blue;
-}
-
-#work-section {
+.services-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 100px;
 }
-
-h2 {
-    font-size: 2rem;
+.service > h3 {
+    font-size: 1rem;
+    opacity: .7;
     font-weight: normal;
 }
 
-.skills {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: left;
-    gap: 25px;
-
+.with-line {
+    position: relative;
 }
 
-.work {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: left;
+.with-line::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 1px;
+    background-color: #FFC700;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
 }
 
-.work a {
+.service {
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    font-size: 1.25rem;
+    gap: 15px;
 }
 
-.work > a > span {
-    font-size: 100px;
+#view-service {
+    border-style: none;
+    padding: 15px 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    outline: 1px solid #FFC700;
+    border-radius: 15px;
+    color: #FFC700;
 }
