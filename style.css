@@ -246,6 +246,11 @@ main {
     align-items: center;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 .form-input {
     background-color: transparent;
     border-style: none;
